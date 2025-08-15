@@ -13,19 +13,22 @@ TrueFeedback is a full-stack web application built with Next.js and TypeScript, 
 
 ```mermaid
 graph LR
-    A[Client (Next.js, React)] --> B(API Gateway);
-    B --> C{Backend (Node.js, TypeScript)};
-    C --> D[Database (MongoDB)];
-    E[Email Service (Resend)] -- Sends emails --> A;
-    C --> E;
-    subgraph "Technology Stack"
-        C[Node.js, TypeScript, Mongoose, bcryptjs, Zod]
-        D[MongoDB]
-        E[Resend]
+    A[Client (Next.js, React)] --> B(API Gateway)
+    B --> C{Backend (Node.js, TypeScript)}
+    C --> D[Database (MongoDB)]
+    E[Email Service (Resend)] -- "Sends emails" --> A
+    C --> E
+
+    subgraph TechnologyStack
+        C1[Node.js, TypeScript, Mongoose, bcryptjs, Zod]
+        D1[MongoDB]
+        E1[Resend]
     end
+
     style A fill:#ccf,stroke:#333,stroke-width:2px
     style C fill:#ccf,stroke:#333,stroke-width:2px
     style D fill:#ccf,stroke:#333,stroke-width:2px
+
 ```
 
 **Key Architectural Decisions:**
